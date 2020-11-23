@@ -1,9 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Michael's Home Page</title>
+	<title>Michael's Webisite</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
 </head>
+<body>
 
-<h1> Hello World</h1>
 
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+		<div class="container">
+			<a class="navbar-brand" href="#">Michael</a>
+			<button class="navbar-toggler" type="button" class="navbar-toggler" data-toggle="collapse" data-target="#my_navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="my_navbar">
+				<ul class="navbar-nav ml-auto">  <!-- align right ml-auto -->
+					<li class="nav-item">
+						<a class="nav-link active" href="index.html" data-target="#"><span>Home</span>
+						</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#" data-target="/datascientist/"><span>Mathematics</span></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="ComputerScience/cshome.html" data-target="/teaching/"><span>Computer Science</span></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="posts/posthome.html" data-target="/teaching/"><span>Posts</span></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#" data-target="#contact"><span>Contact</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+</nav>
+
+
+<section id="about" class="home-section wg-about">
+	<div class="container">
+		<div class="row"
+		itemprop="author"
+		itemscope
+		itemtype="https://schema.org/Person"
+		itemref="person-email person-telephone person-address">
+			<div class="col-12 col-lg-4">
+				<div id="profile"> <!-- #profle align center -->
+					<img class="portrait" src="images/avatar.jpg" itemprop="image" alt="Profile Picture">
+					<div class="portrait-title">
+						<h2 itemprop="name">王斐 Michael</h2>
+					</div>
+					<ul class="network-icon" aria-hidden="true">
+						<li><a itemprop="sameAs" href="https://www.linkedin.com/in/fei-michael-wang-cfa-b4252159/"><i class="fab fa-linkedin-in" style="font-size:26px"></i></a></li>
+						<li><a itemprop="sameAs" href="https://github.com/Michael-yunfei" target="_blank" rel="noopener"><i class="fab fa-github" style="font-size:26px"></i></a></li>
+						<li><a itemprop="sameAs" href="https://twitter.com/michel_yunfei" target="_blank" rel="noopener"><i class="fab fa-twitter" style="font-size:26px"></i></a></li>
+				</div>
+			</div>
+
+			<div class="col-12 col-lg-8">
+				<h1 style="font-family: Georgia">About me</h1>
+				<p>Right now, I am working as a Machine Learning Specialist at SenseTime, which is an artificial intelligence software services company. My careers starts from working in a financial firm, later I became a Chartered Financial Analyst (CFA). Then I decided to pursue a degree in mathematics and get more trainning in computer programming. Since I am very curious and open-minded, I have also invested much of my time in reading and writing. This website was built for me to have some reflections on any subject I am interested in and share them with any one who carries the same passion.</p>
+
+				<div class="row">
+					<div class="col-md-5">
+						<h3>Interests</h3>
+						<ul class="ul-interests">
+							<li>Mathematics</li><li>Music</li><li>Literature</li><li>History</li></ul>
+					</div>
+						<div class="col-md-7">
+							<h3>Education</h3>
+							<ul class="ul-edu fa-ul">
+								<li><i class="fa-li fas fa-graduation-cap"></i>
+									<div class="description">
+										<p class="course">Graduate Diploma in Mathematical Studies, 2020</p>
+										<p class="institution">University College Dublin</p>
+									</div>
+								</li>
+								<li><i class="fa-li fas fa-graduation-cap"></i>
+									<div class="description">
+										<p class="course">MSc in Economics (Dual Degree), 2019</p>
+										<p class="institution">University of Nottingham and Konstanz</p>
+									</div>
+								</li>
+								<li><i class="fa-li fas fa-graduation-cap"></i>
+									<div class="description">
+										<p class="course">MA in Philosophy, 2013</p>
+										<p class="institution">The Chinese University of Hong Kong</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="skills" class="home-section wg-featurette">
+	<div class="container">
+		<div class="row featurette">
+			<div class="col-md-12 section-heading">
+				<h1>Skills</h1>
+			</div>
+			<div class="col-12 col-sm-3">
+				<div class="featurette-icon">
+					<i class="fab fa-java"></i>
+				</div>
+				<h3>Java</h3><p>60%</p>
+			</div>
+			<div class="col-12 col-sm-3">
+				<div class="featurette-icon">
+					<i class="fab fa-js"></i>
+				</div>
+				<h3>JavaScript</h3><p>60%</p>
+			</div>
+			<div class="col-12 col-sm-3">
+				<div class="featurette-icon">
+					<i class="fab fa-python"></i>
+				</div>
+				<h3>Python</h3><p>80%</p>
+			</div>
+			<div class="col-12 col-sm-3">
+				<div class="featurette-icon">
+					<i class="fas fa-music"></i>
+				</div>
+				<h3>Music and Sing</h3><p>30%</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contact" class="home-section wg-contact"><div class="container"><div class="row contact-widget"><div class="col-12 col-lg-4 section-heading"><h1>Contact</h1></div><div class="col-12 col-lg-8"><ul class="fa-ul" itemscope=""><li><i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i><span id="person-email" itemprop="email"><a href="mailto:michael.yunfei@gmail.com">michael.yunfei@gmail.com</a></span></li><li><i class="fa-li fas fa-phone fa-2x" aria-hidden="true"></i><span id="person-telephone" itemprop="telephone"><a href="tel:+44%207926%20257003">+44 7926 257003</a></span></li><li><i class="fa-li fas fa-map-marker fa-2x" aria-hidden="true"></i><span id="person-address" itemprop="address">University College Dublin, Belgrove House 05, Dublin, Ireland</span></li><li><i class="fa-li fab fa-twitter fa-2x" aria-hidden="true"></i><a href="https://twitter.com/michel_yunfei" target="_blank" rel="noopener">Michael Wang</a></li></ul></div></div></div></section>
+
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
 </html>

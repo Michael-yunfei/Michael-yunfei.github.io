@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+body {
+  text-align: justify;
+  font-family: MiloTE,MiloTESec,Constantia,Lucida Bright,Lucidabright,Lucida Serif,Lucida,DejaVu Serif,Bitstream Vera Serif,Liberation Serif,Georgia,serif;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+
+.banner-section {
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
+.post-section{
+  padding-bottom: 0px;
+}
+
+.btn-group-justified {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse:separate;
+}
+
+.btn-group-justified > .btn, .btn-group-justified > .btn-group {
+    display: table-cell;
+    float: none;
+    width:1%
+}
+
+.btn-group-justified > .btn-group .btn {
+    width:100%
+}
+
+.book-menu {
+flex: 0 0 16rem;
+font-size: .875rem;
+}
+
+.instruction-section {
+  padding-top:6px;
+  padding-bottom: 0px;
+}
+
+.content-section {
+  padding: 0px;
+}
+
+/* Sidebar css  */
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    align-content: justify;
+}
+
+#sidebar {
+    min-width: 180px;
+    max-width: 250px;
+    border: 1.5px dashed #373737;
+    border-radius: 19px;
+    margin-right: 1em;
+    margin-bottom: 1.5em;
+    margin-top: 0.3em;
+    padding: 16px;
+}
+
+#sidebar.active {
+    align-content: center;
+    align-items: justify;
+
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 5px;
+  height: 0;
+  overflow: hidden;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+    max-width: 830px;
+    margin-top: 16px;
+    min-height: 100%;
+}
+
+#posthead li {
+  list-style: none;
+}
+
+#postlist li {
+  list-style: none;
+}
+
+
+
+.post ul li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.post ul li p {
+    display: inline;
+}
+
+.post-header {
+    display: flex;
+}
+.post-header .meta .date {
+    margin-right: 30px;
+    width: 64px;
+    text-align: center;
+}
+.post-header .meta .date .day {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    line-height: 0.45em;
+    font-size: 3em;
+    display: block;
+    margin-bottom: 20px;
+}
+.post-header .meta .date .rest {
+    display: block;
+    font-size: 0.75em;
+}
+.post-header h1.title {
+    margin: -10px 0 0 0;
+}
+
+.post .title.small {
+    margin: 0 0 10px 0;
+}
+.post .post-header {
+    margin-bottom: 30px;
+}
+
+.post-header h1.title {
+    margin: -10px 0 0 0;
+}
+
+.post-title {
+  /* title for the list  */
+  font-family: "Inter", sans-serif;
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: #9379FA;
+  font-weight: 500;
+  line-height: 1.3em;
+}
+
+a, a:hover {
+text-decoration: none;
+}
+
+.post-title a:hover{
+  border-bottom: 2px solid #447A92;
+}
+
+.title {
+  font-family: 'Merriweather', serif;
+  margin: -10px 0 0 0;
+  font-size: 2.3em;
+  padding-top: 10px;
+  color: #333;
+}
+
+
+.footer {
+text-align: center;
+font-size: 0.75em;
+color: #999;
+border-top: 1px solid #f4f4f4;
+margin-top: 40px;
+padding: 15px 0;
+width: 100%;
+bottom: 0;
+position: static;
+z-index: 1;
+}
