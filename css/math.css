@@ -262,15 +262,6 @@ video {
     transform: rotate(280deg);
 }
 
-
-.portrait {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    border-radius: 50%;
-    object-fit:cover
-}
-
 .titlebox {
   width:80%;
   height: 60px;
@@ -290,4 +281,39 @@ video {
   text-align: left;
   padding-top:16px;
   font-family: "Computer Modern Concrete", sans-serif;
+}
+
+.postlist li{
+  list-style: none;
+}
+
+.postlist a:hover{
+  text-decoration: none;
+  border-bottom: 1.5px solid #333333;
+}
+
+.leadingdot {
+  text-align: right;
+}
+
+.leadingdot::before{
+  content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+}
+
+@media screen and (max-width: 1024px) {
+  .leadingdot::before{
+    content: ". . . . . . . . . . . . . .";
+  }
+}
+
+.allmathpost {
+  text-align: right;
+  padding-top: 30px;
+  color: black;
+  font-family: "Computer Modern Typewriter", sans-serif;
+}
+
+.allmathpost a:hover{
+  text-decoration: none;
+  border-bottom: 1.5px solid #333333;
 }
