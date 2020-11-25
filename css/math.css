@@ -233,9 +233,9 @@ body.dark, .dark .docs-toc-link, .dark .docs-sidebar .nav > li:not(.active) > a,
 
 @media screen and (max-width: 980px) {
   #introimage{
-    width:400px;
-    height: 400px;
-    left:0px;
+    width:300px;
+    height: 300px;
+    left:-10px;
     top:5px;
   }
 }
@@ -260,4 +260,34 @@ video {
     -o-transform: rotate(280deg);
     -ms-transform: rotate(280deg);
     transform: rotate(280deg);
+}
+
+
+.portrait {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit:cover
+}
+
+.titlebox {
+  width:80%;
+  height: 60px;
+  border:1px solid #000;
+  padding-top:15px;
+  font-family: "Computer Modern Concrete", sans-serif;
+  font-size: 20px;
+}
+
+.titlebox a:hover{
+  text-decoration: none;
+  border-bottom: 1.5px solid #333333;
+}
+
+.contentbox {
+  width:80%;
+  text-align: left;
+  padding-top:16px;
+  font-family: "Computer Modern Concrete", sans-serif;
 }
