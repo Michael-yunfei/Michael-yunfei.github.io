@@ -1,0 +1,88 @@
+html {
+    font-family: 'Computer Modern Concrete', sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .8);
+    line-height:1.65
+}
+
+@media screen and (min-width: 58em) {
+    html {
+        font-size:18px
+    }
+}
+
+body {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: inherit;
+    color: inherit;
+    background-color: #fff;
+    margin-top: 36px;
+    padding-top: 0;
+    counter-reset:captions
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin-top:36px
+    }
+}
+
+.container {
+    max-width: 830px;
+    margin-top: 10px;
+    min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+.toprightindex {
+  text-align: right;
+  margin-top: -10px;
+  font-size: 16px;
+  font-family: "Computer Modern Serif", sans-serif;
+}
+
+.toprightindex a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #333333;
+}
+
+.mathpost-header {
+  margin-top: -18px;
+}
+
+@media screen and (max-width: 1024px) {
+  .mathpost-header {
+    margin-top: -8px;
+  }
+
+  .toprightindex {
+    text-align: right;
+    margin-top: -19px;
+    font-family: "Computer Modern Serif", sans-serif;
+  }
+}
+
+.leadingdot {
+  text-align: right;
+  margin-top: -10px;
+}
+
+.leadingdot::before{
+  content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+}
+
+@media screen and (max-width: 1024px) {
+  .leadingdot::before{
+    content: ". . . . . . . . . . . . . .";
+  }
+}
+
+.mathpost-content {
+  padding-top: 19px;
+  text-align: justify;
+}

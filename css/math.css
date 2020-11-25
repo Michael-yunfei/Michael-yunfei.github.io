@@ -294,6 +294,7 @@ video {
 
 .leadingdot {
   text-align: right;
+  margin-top: -6px;
 }
 
 .leadingdot::before{
@@ -308,12 +309,33 @@ video {
 
 .allmathpost {
   text-align: right;
-  padding-top: 30px;
+  padding-top: 25px;
   color: black;
   font-family: "Computer Modern Typewriter", sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+  .allmathpost {
+    margin-right:6px;
+  }
+
 }
 
 .allmathpost a:hover{
   text-decoration: none;
   border-bottom: 1.5px solid #333333;
+}
+
+.footer {
+text-align: center;
+font-family: sans-serif;
+font-size: 0.65em;
+color: #999;
+border-top: 1px solid #f4f4f4;
+margin-top: 40px;
+padding: 15px 0;
+width: 100%;
+bottom: 0;
+position: static;
+z-index: 1;
 }
