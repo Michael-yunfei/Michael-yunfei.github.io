@@ -27,7 +27,7 @@
 					<h3>Inner Product Space</h3>
 				</div>
 				<div class="leadingdot">
-					25, Nov 2020
+					10pm, 25, Nov 2020
 				</div>
 
 				<div class="mathpost-content">
@@ -38,11 +38,73 @@
 						I view Fourier transform as the continuous counterpart of Fourier coefficient:
 						$$c_n = \frac{1}{L} \int_{a}^b f(x) e^{-2\pi i n x/L} dx, \ \ \ n \in \mathbb{Z}$$
 
-						According to Prof. Brad Osgood from Standford University, there is nothing wrong to understand Fourier transform in this way. However, I am complete lost later when he introduced concept of tempered distribution, which is a continuous linear functional on a space of test functions (Osgood, 2008 <a href="https://youtu.be/47yUeygfj3g">Online</a>).
+						According to Prof. Brad Osgood from Standford University, there is nothing wrong to understand Fourier transform in this way. However, I am complete lost later when he introduced concept of tempered distribution, which is a continuous linear function on a space of test functions (Osgood, 2008 <a href="https://youtu.be/47yUeygfj3g">Online</a>).
 					</p>
 
 					<p>
-						Trying to get the gist of tempered distribution, I did some research by searching and reading more notes. Thanks to the thesis written by Terri Joan Harris (2015), I could realize that tempered distribution is a subject of functional analysis, which is concerned with infinite-dimensional spaces.
+						Trying to get the gist of tempered distribution, I did some research by searching and reading more notes. Thanks to the thesis written by Terri Joan Harris (2015), I come to realize that tempered distribution is a subject of functional analysis, which is concerned with infinite-dimensional spaces. Complete normed vector spaces over the real or complex numbers, called Banach spaces, are the foundation of this field of study. An important example is the Hilbert space where the norm arises from an inner product.
+					</p>
+
+					<p>
+						Before talking about inner product space, let's review dot product first. For \(x, y \in \mathbb{R}^n\), the <b>dot product</b> of \(x\) and \(y\) is defined by
+						$$x \cdot y = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n$$, where \(x = (x_1, x_2, \cdots
+						 x_n) \) and \(y = (y_1, y_2, \cdots
+						  y_n) \). For \(y \in \mathbb{R}^n \) fixed, the map from \(\mathbb{R}^n\) to \(\mathbb{R}\) is linear:
+							$$f(x) \to x \cdot y $$
+							as $$\begin{align} f(u+v) & = (u + v) \cdot y = u \cdot y + v \cdot y = f(u) + f(v)\\
+							 f(\alpha u) & = \alpha f(u)\end{align}$$.
+					</p>
+
+					<p>
+						An inner product space is a generalization of the dot product. An inner product is defined by abstracting the properties of the dot product in real vectors. However, we want to <i>make it more general</i> by defining inner product space in both real and compelx vector space. Before making this definition, we need examine the complex numbers case first.
+					</p>
+
+					<p>
+						Recall that if \(\lambda = a + b i\) where \(a, b \in \mathbb{R}\), then
+						<ul>
+							<li>
+								\(|\lambda| = \sqrt{(a^2 + b^2)} \)
+							</li>
+							<li>
+								The complex conjugate of \(\lambda\) is \(\bar{\lambda} = a - bi \)
+							</li>
+							<li>
+								\(|\lambda|^2 = \lambda \bar{\lambda} \)
+							</li>
+						</ul>
+
+						For \(z = (z_1, z_2, \cdots, z_n) \in \mathbb{C}^n \), we define the norm of \(z\) by $$||z||= \sqrt{|z_1|^2 + |z_2|^2 + \cdots + |z_n|^2}$$
+						Note that
+						$$||z||^2 = z_1 \overline{z_1} + \cdots + z_n \overline{z_n}$$
+					</p>
+
+					<p>
+						The above equation suggests that the inner product of \(w=(w_1, w_2, \cdots
+						, w_n) \) with \(z\) should be
+						$$w \cdot z = w_1 \overline{z_1} + w_1 \overline{z_2} + \cdots + w_n \overline{z_n}$$
+						If the roles of \(w and z\) interchanged, then we could replace above equation with their conjugate elements. Now, we are ready to define define inner product space.
+					</p>
+
+					<p>
+						<i> Definition: inner product</i> <br />
+						An innder product on \(V\) is a fucntion that takes each ordered pair \( (u, v) \) of elements of \(V\) to a number \( \langle u, v\rangle \in \mathbb{F} \) and has the following properties:
+						<ul>
+							<li>
+								positivity: \( \langle v, v \rangle \geq 0 \) for all \( v \in \mathbb{V} \);
+							</li>
+							<li>
+								definiteness: \( \langle v, v \rangle = 0 \) if and only if \(v = 0\);
+							</li>
+							<li>
+								aditivity in first slot: \( \langle u + v, w \rangle = \langle u, w \rangle + \langle v, w \rangle \)
+							</li>
+							<li>
+								homogeneity in first slow: \( \langle \lambda u, v \rangle = \lambda \langle u, v \rangle \) for all \(\lambda \in \mathbb{F} \) and all \(u, v \in \mathbb{V} \)
+							</li>
+							<li>
+								conjugate symmetry: \( \langle u, v \rangle = \overline{\langle v, u \rangle} \) for all \(u, v \in \mathbb{V} \).
+							</li>
+						</ul>
 					</p>
 
 
