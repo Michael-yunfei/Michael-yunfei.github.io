@@ -53,13 +53,11 @@
 							$$f(x) \to x \cdot y $$
 							as $$\begin{align} f(u+v) & = (u + v) \cdot y = u \cdot y + v \cdot y = f(u) + f(v)\\
 							 f(\alpha u) & = \alpha f(u)\end{align}$$.
+						An inner product space is a generalization of the dot product. It is defined by abstracting the properties of the dot product in real vectors. However, we want to <i>make it more general</i> by defining inner product space in both real and compelx vector space.
 					</p>
 
 					<p>
-						An inner product space is a generalization of the dot product. An inner product is defined by abstracting the properties of the dot product in real vectors. However, we want to <i>make it more general</i> by defining inner product space in both real and compelx vector space. Before making this definition, we need examine the complex numbers case first.
-					</p>
-
-					<p>
+						Before making this definition, we need examine the complex numbers case first.
 						Recall that if \(\lambda = a + b i\) where \(a, b \in \mathbb{R}\), then
 						<ul>
 							<li>
@@ -86,28 +84,107 @@
 					</p>
 
 					<p>
-						<i> Definition: inner product</i> <br />
-						An innder product on \(V\) is a fucntion that takes each ordered pair \( (u, v) \) of elements of \(V\) to a number \( \langle u, v\rangle \in \mathbb{F} \) and has the following properties:
+						<i> Definition: inner product</i> <br>
+						An innder product on \(V\) is a fucntion that takes each ordered pair \( (u, v) \) of elements of \(V\) to a number \( \langle u, v\rangle \in F \) and has the following properties:
 						<ul>
 							<li>
-								positivity: \( \langle v, v \rangle \geq 0 \) for all \( v \in \mathbb{V} \);
+								positivity: \( \langle v, v \rangle \geq 0 \) for all \( v \in V \);
 							</li>
 							<li>
 								definiteness: \( \langle v, v \rangle = 0 \) if and only if \(v = 0\);
 							</li>
 							<li>
-								aditivity in first slot: \( \langle u + v, w \rangle = \langle u, w \rangle + \langle v, w \rangle \)
+								aditivity in first slot: \( \langle u + v, w \rangle = \langle u, w \rangle + \langle v, w \rangle  \)
 							</li>
 							<li>
-								homogeneity in first slow: \( \langle \lambda u, v \rangle = \lambda \langle u, v \rangle \) for all \(\lambda \in \mathbb{F} \) and all \(u, v \in \mathbb{V} \)
+								homogeneity in first slow: \( \langle \lambda u, v \rangle = \lambda \langle u, v \rangle \) for all \(\lambda \in F \) and all \(u, v \in V \)
 							</li>
 							<li>
-								conjugate symmetry: \( \langle u, v \rangle = \overline{\langle v, u \rangle} \) for all \(u, v \in \mathbb{V} \).
+								conjugate symmetry: \( \langle u, v \rangle = \overline{\langle v, u \rangle} \) for all \(u, v \in V \).
 							</li>
 						</ul>
 					</p>
 
+					<p>
+						<b> Examples</b> <br>
 
+						The Euclidean inner product on \(F^n\) is defined by
+						$$\langle(w_1, \cdots, w_n), (z_1, \cdots, z_n) \rangle = w_1 \overline{z_1} + \cdots + w_n\overline{z_n}$$ <br />
+
+						An inner product can be defined on the vector space of continuous real-valued functions on the interval \([-1, 1]\) by
+						$$\langle f, g \rangle = \int_{-1}^1 f(x) g(x) dx$$
+						One should verify this equation satisfies those five properties defined in the above definition.
+					</p>
+					<p>
+						<i> Definition: vector space</i> <br>
+
+						A vector space is a set \(V\) along with an addition on \(V\) and a scalar multiplication on \(V\) such that the following properties hold:
+						<ul>
+							<li>
+								commutativity: \( u + v = v + u \) for all \(u, v \in V\);
+							</li>
+							<li>
+								associativity: \( (u+v) + w = u + (v + w) \) and \( (ab) v = a(bv) \) for all \(u, v, w \in V \) and all \(a, b \in F \);
+							</li>
+							<li>
+								additive identity: there exsits an element \(0 \in V \) such that \(v + 0 = v \) for all \( v \in V \);
+							</li>
+							<li>
+								additive inverse: for every \( v \in V \), there exists \(w \in V \) such that \(v + w = 0 \);
+							</li>
+							<li>
+								multiplicative identity: \(1 v = v \) for all \(v \in V \);
+							</li>
+							<li>
+								distributive properties: \( a ( u + v) = a u + av \) and \( ( a + b) v = av + bv \) for all \(a , b \in F \) and all \(u, v \in V \).
+							</li>
+						</ul>
+					</p>
+
+					<p>
+						<i>Definition: inner product space</i> <br>
+
+						An inner product space is a vector space \(V \) along with an inner product on \(V \).
+					</p>
+
+					<p>
+						The most important example of an inner product space is \( F^n \) with the Euclidean inner product. Now, let's study basic properties of an inner product:
+						<ol type='a'>
+							<li>
+								For each fixed \(u \in V\), the function that takes \(v\) to \( \langle v, u \rangle \) is a linear map from  \( V \) to \(F \)
+							</li>
+							<li>
+								\( \langle u, 0 \rangle = \langle 0, u \rangle = 0 \) for every \( u \in V \)
+							</li>
+							<li>
+								\( \langle u, v + w \rangle = \langle u, v \rangle + \langle u, w \rangle\) for all \(u, v, w \in V \).
+							</li>
+							<li>
+								\( \langle u, \lambda v \rangle = \bar{\lambda} \langle u, v \rangle \) for all \(\lambda \in F \) and \(u, v \in V \).
+							</li>
+						</ol>
+					</p>
+
+					<p>
+							<i>Definition: norm, \( ||v || \)</i> <br>
+							For \(v \in V \), the norm of \(v\), denoted \( ||v || \), is defined by
+							$$||v|| = \sqrt{\langle v, v \rangle}$$. For example, in the vector space of continuous real-value functions on \([-1, 1]\), we have $$\begin{equation}||f|| = \sqrt{\int_{-1}^1 (f(x))^2 dx} \end{equation}$$.
+
+							Suppose \(v \in V \), we could have:
+							<ol type='a'>
+								<li>
+									\(||v || = 0 \) if and only if \( v = 0 \).
+								</li>
+								<li>
+									\( || \lambda v || = |\lambda | ||v || \) for all \( \lambda \in F \).
+								</li>
+							</ol>
+					</p>
+				</div>
+
+				\Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<div class="leadingdot">
+					5pm, 27, Nov 2020
 				</div>
 			</div>
 		</div>
