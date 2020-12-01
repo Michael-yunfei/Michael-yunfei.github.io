@@ -143,3 +143,14 @@ a {
 .round {
   border-radius: 60%;
 }
+
+.theorembox {
+  border:1.5px;
+  border-style:dashed;
+  border-color:#333333;
+  border-radius: 18px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}

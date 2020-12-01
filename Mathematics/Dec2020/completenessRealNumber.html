@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Completness of the Real Numbers | Michael</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+	<link rel="stylesheet" href="../../css/mathpost.css">
+  <!-- math equations javascript -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <section id="mathpostPage">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-12 col-lg-12">
+  				<div class="toprightindex">
+  					<a href="../mathhome.html"><span style="color:black;">MathHome</span></a>
+  				</div>
+
+  				<div class="mathpost-header">
+  					<h3>Completeness of the Real Number System</h3>
+  				</div>
+  				<div class="leadingdot">
+  					Dec 1, 2020, 11:56 am
+  				</div>
+
+          <div class="mathpost-content">
+
+            <p>
+              Compeleness is the key property of the real numbers that the rational numbers lack. Several theorems related to this property can be used to solve for other problems in analysis. In this post, I would examine this property and use it to lay the fundation of measure theory.
+            </p>
+
+            <p>
+              <b>Definition</b> <br />
+                A real number is <i>rational</i> if it can be written in the form \( \frac{p}{q} \), where \(p\) and \(q\) are integers with \(q \neq 0\). The set of rational numbers is denoted by \(\mathbb{Q}\). A real number that is not rational is termed <i>irrational</i>.
+            </p>
+
+            <p>
+              <b>Theorem</b> <br />
+              Between any two distinct real numbers there is a rational number.<br />
+              <b>Proof.</b> Consider the set of numbers of the form \(\frac{p}{q}\) with \(q\) fixed, and \(p\) any integer. Assume that there are no such numbers between \(a\) and \(b\). Let \(\frac{p}{q}\) be the number immediately before \(a\). Then \( \frac{p+1}{q} \) is the number immediately after \(b\). We necessarily have
+              $$\frac{p+1}{q} - \frac{p}{q} \geq b - a \ \ \Longleftrightarrow \frac{1}{q} \geq b - a$$
+              If we choose \(q\) sufficiently large, then the above inequality is wrong. Then there is at least one rational number between \(a\) and \(b\). <span style="float:right">\( \blacksquare \)</span>
+            </p>
+
+            <p>
+              <b>Corollary</b> <br />
+              Let \( a < b \). There is an infinite number of rational numbers in the open inverval \(a, b\). <br />
+              <b>Proof.</b> We know that there must be a rational number, say \(c_1 \), between \(a\) and \(b\). Then there is another rational number, say \(c_2\), between \(c_1\) and \(b\). Then there is \(c_3\), etc... All those numbers are distinct and they are between \(a\) and \(b\). <span style="float:right">\( \blacksquare \)</span>
+            </p>
+
+            <p>
+              <b>Theorem</b> <br />
+              Between any two distinct real numbers there is an irrational number. <br />
+              <b>Proof.</b> We can proceed as in the proof of the previous theorem. Consider the set of numbers of the form \( \frac{p}{q} + \sqrt{2} \) with \(q \) fixed, and \(p\) any integer; all those numbers are irrational. Assume that there are no such numbers between \(a \) and \(b\). Let \(\frac{p}{q} + \sqrt{2} \) be the number immediately before \(a\). Then \( \frac{p+1}{q} + \sqrt{2} \) is the number immediately after \(b\). We necessarily have
+              $$\frac{p+1}{q} + \sqrt{2} - ( \frac{p}{q} + \sqrt{2}) \geq b - a  \ \ \Longleftrightarrow \ \ \frac{1}{q} \geq b - a$$
+              If we choose \(q\) sufficiently large, then the above inequality is wrong. Then there is at least one irrational number between \(a \) and \(b\). <span style="float:right">\( \blacksquare \)</span>
+            </p>
+
+            <p>
+              <b>Definition</b> <br />
+              A number of  \(u\) is a <i>least upper bound of</i> \(A\) if
+              <ol type="i">
+                <li>
+                  \(u\) is an upper bound of \(A\) and
+                </li>
+                <li>
+                  if \(U\) is any upper bound of \(A\) then \( u \leq U \).
+                </li>
+              </ol>
+              A number of \(l\) is a <i>greatest lower bound of</i> \(A\) if
+              <ol type="i">
+                <li>
+                  \(l\) is a lower bound of \(A\) and
+                </li>
+                <li>
+                  if \(L\) is any lower bound of \(A\) then \(l \geq L \).
+                </li>
+              </ol>
+            </p>
+
+            <p class="theorembox">
+              <b>Completeness Axiom</b> <br />
+              Every non-empty subset of the real numbers that is bounded above has a least upper bound.
+            </p>
+
+            <p>
+              If you lived on a planet where they only used the rational numbers then all the axioms would hold excpet the completeness axiom. The set \(\{ x \in \mathbb{Q}: x^2 \leq 2 \} \) has rational upper bounds \(1.5, 1.42, 1.415, \cdots
+               \) but no rational upper bound as we know there is an infinite number of rational numbers in the open inverval \(a, b \) when \(a < b \). Now, assume we have a set \(S = ( \sqrt{2} - \epsilon, \sqrt{2}) \), then there are infinite number of rational numbers in the interval of set \(S\) and also an element of   \(\{ x \in \mathbb{Q}: x^2 \leq 2 \} \).
+            </p>
+
+          </div>
+
+          <div class="reference-list">
+            <br />
+            <h4>References</h4>
+            Zaboronski, O. (2013) Analysis I. Lecture Notes [online]. Available at: <a href="https://warwick.ac.uk/fac/sci/maths/people/staff/oleg_zaboronski/analysisi/notes-ma131_ch5.pdf">https://warwick.ac.uk/fac/sci/maths/people/staff/oleg_zaboronski/analysisi/notes-ma131_ch5.pdf</a> (Accessed: 1 December 2020)
+          </div>
+
+  			</div>
+  		</div>
+  	</div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="../../vendor/jquery/jquery.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!-- code highlight -->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<!-- hugo themes -->
+<script src="https://themes.gohugo.io//theme/hugo-ink/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</body>
+</html>
