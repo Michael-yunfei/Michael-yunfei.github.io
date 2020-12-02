@@ -1,0 +1,133 @@
+html {
+    font-family: 'Computer Modern Concrete', sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .8);
+    line-height:1.65
+}
+
+@media screen and (min-width: 58em) {
+    html {
+        font-size:18px
+    }
+}
+
+body {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: inherit;
+    color: inherit;
+    background-color: #fff;
+    margin-top: 36px;
+    padding-top: 0;
+    counter-reset:captions;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin-top:30px
+    }
+}
+
+.container {
+  max-width: 768px;
+  margin-top: 10px;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+.openbtn {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 6px;
+  border: none;
+}
+
+.toprightindex {
+  text-align: right;
+  margin-top: -15px;
+  margin-right: 0px;
+  font-size: 16px;
+  font-family: "Computer Modern Serif", sans-serif;
+}
+
+.toprightindex a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #333333;
+}
+
+.mathpost-header {
+  margin-top: -32px;
+}
+
+.mathpost-content {
+  padding-top: 10px;
+  text-align: justify;
+}
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 66px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  padding: 8px;
+  font-size: 20px;
+  color: #F1F1F1;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+
+.tableofcontent a {
+  padding: 8px 8px 8px 32px;
+  font-size: 18px;
+  color: #F1F1F1;
+  display: block;
+  transition: 0.3s;
+}
+
+
+
+.tableofcontent a:hover {
+  color: #f1f1f1;
+  text-decoration: underline;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn:hover {
+  background-color: #F5F5F5;
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}

@@ -283,6 +283,11 @@ video {
   font-family: "Computer Modern Concrete", sans-serif;
 }
 
+.contentbox a:hover{
+  text-decoration: none;
+  border-bottom: 1px solid #333333;
+}
+
 .postlist li{
   list-style: none;
 }
