@@ -19,12 +19,17 @@
   	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 		<a href="#">Fourier Analysis</a>
 		<div class="tableofcontent">
-			<a href="#">Introduction</a>
-	  	<a href="#">Definitions and Terminalogy</a>
-	  	<a href="#">Hilbert Space</a>
+			<a href="#">Inner Product Space</a>
+	  	<a href="#">Main Definitions and Some Examples</a>
 	  	<a href="#">Types of Convergence</a>
+	  	<a href="#">The Projection Theorem</a>
+			<a href="#">Parseval's Identity</a>
+			<a href="#">Convergence of Fourier Series</a>
+			<a href="#">A Gentle Introduction to Fourier Transforms</a>
 		</div>
 	</div>
+
+
 
 <div id="course-content">
 
@@ -39,25 +44,58 @@
 	</div>
 
 	<div class="mathpost-content">
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
 
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
+		<p>
+			According to Stein (2011), it is better to start the learning of analysis with Fourier analysis as its ideas permeate much of the present-day analysis. I followed his path and devote myself on this subject by exploring some basic facts about Fourier series and Fourier transforms. My purpose is to understand the convergence of Fourier series. Since Fourier analysis plays a central role in analasis, I belive it would be helpful for me to study other modules, such as complex analysis and real analysis.
+		</p>
+		<p>
+			I have to declare that much of content in this course are borrowed from the thesis by Harris (2015). You could google her work with the reference I provied or just download it <a href="../documents/harris.pdf">here</a>.
+		</p>
 
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
+		<p>
+			To understand the convergence of Fourier series well, one needs to know Hilbert space first. In this book, Stein (2011) only introduces and explained the theory of Hilbert briefly, which makes me feel difficult to follow. Therefore, I would follow the thesis by Harris (2015) and examin the structure of Hilbert space first, which it will lay the foundation for understanding the convergence of Fourier series.
+		</p>
 
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
+		<p>
+			The structure of my notes is organized as follows:
+			<ol type="i">
+				<li>
+					Inner Product Space
+				</li>
+				<li>
+					Main Definitions and Some Examples
+				</li>
+				<li>
+					Types of Convergence
+				</li>
+				<li>
+					The Projection Theorem
+				</li>
 
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
+				<li>
+					Parseval's Identity
+				</li>
+
+				<li>
+					Convergence of Fourier Series
+				</li>
+
+				<li>
+					A Gentle Introduction to Fourier Transforms
+				</li>
+
+			</ol>
+		</p>
+
+
+		<div class="reference-list">
+			<br />
+			<h4>References</h4>
+			Stein, E.M. and Shakarchi, R., 2011. Fourier analysis: an introduction (Volume 1). Princeton University Press.
+
+			<br>
+			Harris, T.J., 2015. Hilbert Spaces and Fourier Series
+		</div>
 
 	</div>
 
@@ -104,12 +142,12 @@
 <script>
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
+  // document.getElementById("course-content").style.marginLeft = "5px";
 }
 
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("course-content").style.marginLeft= "0";
 }
 </script>
 
