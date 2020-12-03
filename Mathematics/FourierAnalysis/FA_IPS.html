@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inner Product Space | Michael</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+	<link rel="stylesheet" href="../../css/mathcourse.css">
+  <!-- math equations javascript -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+	<div id="mySidebar" class="sidebar">
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+		<a href="#">Fourier Analysis</a>
+		<div class="tableofcontent">
+			<a href="FourierIndex.html">Introduction</a>
+			<a href="#">Inner Product Space</a>
+	  	<a href="#">Main Definitions and Some Examples</a>
+	  	<a href="#">Types of Convergence</a>
+	  	<a href="#">The Projection Theorem</a>
+			<a href="#">Parseval's Identity</a>
+			<a href="#">Convergence of Fourier Series</a>
+			<a href="#">A Gentle Introduction to Fourier Transforms</a>
+			<a href="#">CNN and Fourier Series</a>
+		</div>
+	</div>
+
+
+  <div id="course-content">
+
+  	<div class="toprightindex">
+  		<button class="openbtn" onclick="openNav()">☰ Contents</button>
+  		<a href="../mathhome.html"><span style="color:black;">MathHome</span></a>
+  	</div>
+
+
+  	<div class="mathpost-header">
+  		<h4>Inner Product Space</h4>
+  	</div>
+
+  	<div class="mathpost-content">
+
+			<p>
+				Before introducing innder product space, it is helpful to review hierarchy of mathematical spaces presented in the following figure.
+				<center>
+					<img width="30%" src="images/Mathematical_Spaces.png" alt="hierarchy of mathematical spaces" />
+				</center>
+				<br />
+
+				Since topological spaces are the most abstract one, we will not discuss it at the moment. Let's start to talk about metric spaces first, which most students (include me) are quite familiar with. In mathematics, a <i>metric is a set together with a metric on the set. The metric is a function that defines a concept of distance between any two members of the set.</i>
+			</p>
+
+			<p>
+				<b>Definition</b> <br />
+				A metric space \( (\mathcal{M}, d) \) is a set \( \mathcal{M} \) together with a function \( d: \mathcal{M} \times \mathcal{M} \to \mathbb{R} \) called a metric satisfying four conditions:
+				<ol type="i">
+					<li>
+						 \(d (x, y ) \geq 0 \) for all \(x, y \in \mathcal{M} \). (non-negativeness)
+					</li>
+					<li>
+						 \( d(x, y) = 0 \) if and only if \( x = y \). (identification)
+					</li>
+					<li>
+						\(d (x, y) = d(y, x) \) for all \(x, y \in \mathcal{M} \). (symmetry)
+					</li>
+					<li>
+						 \(d (x, y) \leq d (x, z) + d(z, y) \)  for all \(x, y, z \in \mathcal{M} \). (triangle inequality)
+					</li>
+				</ol>
+
+				For example, the typical distance used in the Euclidean space is defined as
+				$$d(x, y) = \sqrt{\sum_{i=1}^n(x_i - y_i)^2}$$
+
+				In general, one could define many distance functions, such as
+				$$d(x, y) \equiv \sum_{i=1}^n |x_i - y_i|$$
+			</p>
+
+			<p>
+				Very often, we are interested in a subset of functions called <i>norms</i>. We will define them in a way that it applies to any vector. Therefore, it is very natural for us now to introduce vector space.
+			</p>
+			<p>
+				<b> Definition</b> <br>
+				A vector space is a set \(V\) along with an addition on \(V\) and a scalar multiplication on \(V\) such that the following properties hold:
+				<ul>
+					<li>
+						commutativity: \( u + v = v + u \) for all \(u, v \in V\);
+					</li>
+					<li>
+						associativity: \( (u+v) + w = u + (v + w) \) and \( (ab) v = a(bv) \) for all \(u, v, w \in V \) and all \(a, b \in F \);
+					</li>
+					<li>
+						additive identity: there exsits an element \(0 \in V \) such that \(v + 0 = v \) for all \( v \in V \);
+					</li>
+					<li>
+						additive inverse: for every \( v \in V \), there exists \(w \in V \) such that \(v + w = 0 \);
+					</li>
+					<li>
+						multiplicative identity: \(1 v = v \) for all \(v \in V \);
+					</li>
+					<li>
+						distributive properties: \( a ( u + v) = a u + av \) and \( ( a + b) v = av + bv \) for all \(a , b \in F \) and all \(u, v \in V \).
+					</li>
+				</ul>
+
+				<b>Definition</b> <br />
+
+				Let \( \mathcal{V} \) be a vector space (real or complex), and function \( N : \mathcal{V} \to \mathbb{R} \) (\(\mathbb{C} \) if it was in complex vector space). We say \( N (\cdot) \) is a norm if the following conditions hold:
+				<ol type="i">
+					<li>
+						\(N (v) \geq 0 \) for all \(v \in \mathcal{V} \).
+					</li>
+					<li>
+						\(N (v) = 0 \) if and only if \(v = 0\).
+					</li>
+					<li>
+						\(N (\lambda v) = |\lambda | N(v) \) for all \(v \in \mathcal{V} \) and \( \lambda \in \mathbb{R}\) (\(\mathbb{C}\) if it was in complex vector space ).
+					</li>
+					<li>
+						\( N(v + w) \leq N(v) + N(w) \) for all \(v, w \in \mathcal{V} \).
+					</li>
+				</ol>
+
+			</p>
+
+    </div>
+
+
+		<div class="reference-list">
+					<br />
+					<h4>References</h4>
+
+		</div>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!-- code highlight -->
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <!-- hugo themes -->
+  <script src="https://themes.gohugo.io//theme/hugo-ink/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    // document.getElementById("course-content").style.marginLeft = "5px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("course-content").style.marginLeft= "0";
+  }
+  </script>
+
+  </body>
+  </html>
