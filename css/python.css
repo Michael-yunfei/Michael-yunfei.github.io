@@ -7,6 +7,10 @@ q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
+.container {
+  max-width: 816px;
+}
+
 
 .banner-section {
   padding-top:20px;
@@ -52,10 +56,10 @@ font-size: .875rem;
     align-content: justify;
 }
 
-#sidebar {
+#sidebarbox {
     min-width: 180px;
     max-width: 250px;
-    border: 1.5px dashed #373737;
+    /* border: 1.5px dashed #373737; */
     border-radius: 19px;
     margin-right: 1em;
     margin-bottom: 1.5em;
@@ -63,9 +67,105 @@ font-size: .875rem;
     padding: 16px;
 }
 
-#sidebar.active {
-    align-content: center;
-    align-items: justify;
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #195D78;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 66px;
+  margin-top: 60px;
+  text-align: left;
+}
+
+.sidebar a {
+  text-decoration: none;
+  padding: 8px;
+  font-size: 20px;
+  color: #F1F1F1;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+
+.tableofcontent a {
+  padding: 8px 8px 8px 32px;
+  font-size: 18px;
+  color: #F1F1F1;
+  display: block;
+  transition: 0.3s;
+}
+
+.tableofcontent a:hover {
+  color: #f1f1f1;
+  text-decoration: underline;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  /* cursor: pointer; */
+  background-color: white;
+  color: black;
+  padding: 6px;
+  border: none;
+  margin-left: 10px;
+}
+
+.openbtn:hover {
+  background-color: #F5F5F5;
+}
+
+@media  screen and (max-width: 766px) {
+
+  #sidebarbox {
+      min-width: 120px;
+      max-width: 200px;
+      /* border: 1.5px dashed #373737; */
+      border-radius: 19px;
+      margin-right: 0em;
+      margin-top: 0.3em;
+      padding: 0px;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #195D78;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 66px;
+    margin-top: 50px;
+    text-align: left;
+  }
+
+
+  .openbtn {
+    /* cursor: pointer; */
+    background-color: white;
+    color: black;
+    padding: 6px;
+    border: none;
+    margin-left: 0px;
+  }
 
 }
 
@@ -93,4 +193,10 @@ border-top: 1px solid #f4f4f4;
 margin-top: 40px;
 padding: 15px 0;
 bottom: 0;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
