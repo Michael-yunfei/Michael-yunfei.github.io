@@ -10,34 +10,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
-	  		<div class="container">
-	  			<b class="navbar-brand" href="#"><span style="opacity: 0.76; font-size:11pt;
-	          font-family: 'Barlow Condensed', sans-serif;">Learn Python</span></b>
-	  			<button class="navbar-toggler" type="button" class="navbar-toggler" data-toggle="collapse" data-target="#my_navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-	  				<span class="navbar-toggler-icon"></span>
-	  			</button>
-	  			<div class="collapse navbar-collapse" id="my_navbar">
-	  				<ul class="navbar-nav ml-auto">  <!-- align right ml-auto -->
-	  					<li class="nav-item">
-	  						<a class="nav-link" href="../../index.html" data-target="../index.html"><span>Home</span>
-	  						</a>
-	  					</li>
-	  					<li class="nav-item"><a class="nav-link" href="../../Mathematics/mathhome.html" data-target="/datascientist/"><span>Mathematics</span></a>
-	  					</li>
-	  					<li class="nav-item"><a class="nav-link" href="../cshome.html" data-target="/teaching/"><span>Computer Science</span></a>
-	  					</li>
-	  					<li class="nav-item"><a class="nav-link" href="../../posts/posthome.html" data-target="/teaching/"><span>Posts</span></a>
-	  					</li>
-	  					<li class="nav-item"><a class="nav-link" href="#" data-target="#contact"><span>Contact</span></a>
-	  					</li>
-	  				</ul>
-	  			</div>
-	  		</div>
-</nav>
-
-<section id='banner' class='banner-section'>
-	<div class="container">
+	<div class="container banner-section">
 		<div aria-label="..." class="btn-group btn-group-justified" role="group" style="font-family: Arial;">
 			<div class="btn-group" role="group">
 				<a href="#" class="btn btn-outline-dark" role="button" aria-pressed="true">
@@ -45,23 +18,23 @@
 				</a>
 			</div>
 			<div class="btn-group" role="group">
-				<a href="L1Video.html" class="btn btn-outline-dark" role="button"><span style="font-size:16px;">Videos</span></a>
-			</div> <div class="btn-group" role="group">
 				<a href="L1Code.html" class="btn btn-outline-dark" role="button"><span style="font-size:16px;">Code</span></a>
+			</div> <div class="btn-group" role="group">
+				<a href="L1Video.html" class="btn btn-outline-dark" role="button"><span style="font-size:16px;">Vidoes</span></a>
 			</div>
 	 </div>
 	</div>
-</section>
+
 
 <section id='instruction' class='instruction-section'>
 	<div class="container">
 
 		<div id="mySidebar" class="sidebar">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-			<a href="#">Fourier Analysis</a>
+			<a href="#">Learn Python</a>
 			<div class="tableofcontent">
-				<a href="FourierIndex.html">Introduction</a>
-				<a href="#">Inner Product Space</a>
+				<a href="#">Introduction</a>
+				<a href="#">Elements of Programming</a>
 				<a href="#">Main Definitions and Some Examples</a>
 				<a href="#">Types of Convergence</a>
 				<a href="#">The Projection Theorem</a>
@@ -71,40 +44,36 @@
 				<a href="#">CNN and Fourier Series</a>
 			</div>
 		</div>
-
-	<div class="wrapper">
-
-    <!-- Sidebar -->
-		<!-- Reference: https://bootstrapious.com/p/bootstrap-sidebar -->
-
+	<!-- <div class="wrapper">
     <nav id="sidebarbox">
-        <!-- <div class="sidebar-heard">
-					 <span style="font-family: roboto,sans-serif;">Table of Contents</span>
-				</div> -->
-				<button class="openbtn" onclick="openNav()">☰ Contents</button>
-    </nav>
 
-    <!-- Page Content -->
+    </nav>
     <div id="chapterbox">
-        <!-- We'll fill this with dummy content -->
 				<p>
 					<svg width="16" height="16">
 						<rect x="0" y="0" width="16" height="16" fill="#DB4238" />
 					</svg>
-				<i>I believe the most effecitve way for beginners to learn Python (or any other programming language) is to study by following the clear and concise intructions. Therefore, all the learning material on this webiste are presented based on one principle:  Keep it Simple and Straightforward (Kiss).</i>
+				I believe the most effecitve way for beginners to learn Python (or any other programming language) is to study by following the clear and concise intructions.
 				</p>
     </div>
+	</div> -->
 
-	</div>
-
-  </div>
-
+</div>
 </section>
 
 <section id='content' class='content-section'>
 	<div class="container">
 
-		<h4>Why Python ?</h4>
+		<div class="toprightindex">
+			<button class="openbtn" onclick="openNav()">☰ Contents</button>
+			<a  class="indexlink" href="../cshome.html"><span style="color:black;">CS Home</span></a>
+		</div>
+
+		<div class="content-header">
+  		<h4>Why Python?</h4>
+  	</div>
+
+
 		<p>
 			Presumably, you should answer this question by yourself. If you want, you could just do some research by searching &ldquo;Why Python?&rdquo; or &ldquo;Should I learn Python?&rdquo; or <q>Is Python worth learning?</q> on Google.
 		</p>
@@ -112,8 +81,35 @@
 		<h4>Getting Started</h4>
 
 		<p>
-
+		First of all, we should set up the python environment for coding. Here are many choices, there are my recommendations:
+		<ul>
+			<li>
+				Atom (or Vim)
+			</li>
+			<li>
+				Jupyter Notebook
+			</li>
+			<li>
+				Pycharm
+			</li>
+		</ul>
 		</p>
+
+		<h4>Instructions for this websit</h4>
+
+		<p>
+			There are three sections for each chapter: notes, code and videos. In notes section, you could read my explanations and some remarks on different topics. In code section, you could read code, or run them by yourself. In videos section, you would find some very good videos I searched on Youtube.
+		</p>
+
+		<p>
+			I am trying to cover all important topics of learning python. Here is the outline (you could visit each chapter by clicking the content button on the top right corner):
+		</p>
+
+		<ol>
+			<li>
+				Elements of Programming
+			</li>
+		</ol>
 
 
 	</div>

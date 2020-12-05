@@ -15,6 +15,7 @@ q {
 .banner-section {
   padding-top:20px;
   padding-bottom: 20px;
+  margin-top: -56px;
 }
 
 .btn-group-justified {
@@ -39,33 +40,66 @@ flex: 0 0 16rem;
 font-size: .875rem;
 }
 
-.instruction-section {
-  padding-top:6px;
-  padding-bottom: 0px;
-}
 
 .content-section {
   padding: 0px;
+  margin-top: -10px;
 }
+
+
+.toprightindex {
+  text-align: right;
+  margin-top: -5px;
+  margin-right: 0px;
+  padding: 6px;
+  font-size: 16px;
+  font-family: "Computer Modern Serif", sans-serif;
+}
+
+.toprightindex a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #333333;
+}
+
+@media screen and (max-width: 766px) {
+  .toprightindex {
+    margin-top: -15px;
+    margin-right: 3px;
+    font-size: 14px;
+  }
+}
+
+
+.content-header {
+  margin-top: -40px;
+}
+
+@media screen and (max-width: 766px) {
+
+  .content-header {
+    margin-top: -10px;
+  }
+
+}
+
 
 /* Sidebar css  */
 
-.wrapper {
+/* .wrapper {
     display: flex;
     align-items: stretch;
-    align-content: justify;
 }
 
 #sidebarbox {
     min-width: 180px;
     max-width: 250px;
-    /* border: 1.5px dashed #373737; */
+    /* border: 1.5px dashed #373737;
     border-radius: 19px;
     margin-right: 1em;
     margin-bottom: 1.5em;
     margin-top: 0.3em;
     padding: 16px;
-}
+} */
 
 .sidebar {
   height: 100%;
@@ -77,8 +111,7 @@ font-size: .875rem;
   background-color: #195D78;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 66px;
-  margin-top: 60px;
+  padding-top: 39px;
   text-align: left;
 }
 
@@ -97,7 +130,7 @@ font-size: .875rem;
 
 
 .tableofcontent a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 0px 8px 32px;
   font-size: 18px;
   color: #F1F1F1;
   display: block;

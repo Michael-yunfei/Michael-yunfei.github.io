@@ -10,34 +10,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
-	  		<div class="container">
-	  			<b class="navbar-brand" href="#"><span style="opacity: 0.76; font-size:11pt;
-	          font-family: 'Barlow Condensed', sans-serif;">Learn Python</span></b>
-	  			<button class="navbar-toggler" type="button" class="navbar-toggler" data-toggle="collapse" data-target="#my_navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-	  				<span class="navbar-toggler-icon"></span>
-	  			</button>
-	  			<div class="collapse navbar-collapse" id="my_navbar">
-	  				<ul class="navbar-nav ml-auto">  <!-- align right ml-auto -->
-	  					<li class="nav-item">
-	  						<a class="nav-link" href="../../index.html" data-target="../index.html"><span>Home</span>
-	  						</a>
-	  					</li>
-	  					<li class="nav-item"><a class="nav-link" href="../../Mathematics/mathhome.html" data-target="/datascientist/"><span>Mathematics</span></a>
-	  					</li>
-	  					<li class="nav-item"><a class="nav-link" href="../cshome.html" data-target="/teaching/"><span>Computer Science</span></a>
-	  					</li>
-	  					<li class="nav-item"><a class="nav-link" href="../../posts/posthome.html" data-target="/teaching/"><span>Posts</span></a>
-	  					</li>
-	  					<li class="nav-item"><a class="nav-link" href="#" data-target="#contact"><span>Contact</span></a>
-	  					</li>
-	  				</ul>
-	  			</div>
-	  		</div>
-</nav>
-
-<section id='banner' class='banner-section'>
-	<div class="container">
+	<div class="container banner-section">
 		<div aria-label="..." class="btn-group btn-group-justified" role="group" style="font-family: Arial;">
 			<div class="btn-group" role="group">
 				<a href="Python.html" class="btn btn-outline-dark" role="button" aria-pressed="true">
@@ -45,73 +18,52 @@
 				</a>
 			</div>
 			<div class="btn-group" role="group">
-				<a href="#" class="btn btn-outline-dark" role="button"><span style="font-size:16px;">Videos</span></a>
-			</div> <div class="btn-group" role="group">
 				<a href="L1Code.html" class="btn btn-outline-dark" role="button"><span style="font-size:16px;">Code</span></a>
+			</div> <div class="btn-group" role="group">
+				<a href="#" class="btn btn-outline-dark" role="button"><span style="font-size:16px;">Video</span></a>
 			</div>
 	 </div>
 	</div>
-</section>
 
-<section id='instruction' class='instruction-section'>
-	<div class="container">
 
-	<div class="wrapper">
+		<div class="container instruction-section">
 
-    <!-- Sidebar -->
-		<!-- Reference: https://bootstrapious.com/p/bootstrap-sidebar -->
-    <nav id="sidebar">
-        <!-- <div class="sidebar-heard">
-					 <span style="font-family: roboto,sans-serif;">Table of Contents</span>
-				</div> -->
-				<ul class="list-unstyled components">
-					<li class="active">
-						<center>
-								<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span style="font-size:1em; color:#484848;">Introduction</span></a>
-								<ul class="collapse list-unstyled" id="homeSubmenu">
-		                    <li>
-		                        <a href="#">Chapter 1</a>
-		                    </li>
-		                    <li>
-		                        <a href="#">Home 2</a>
-		                    </li>
-		                    <li>
-		                        <a href="#">Home 3</a>
-		                    </li>
-		                </ul>
-							</li>
-						</ul>
-						</center>
-    </nav>
-
-    <!-- Page Content -->
-    <div id="chapterbox">
-        <!-- We'll fill this with dummy content -->
-				<p>
-					<svg width="16" height="16">
-						<rect x="0" y="0" width="16" height="16" fill="#18A491" />
-					</svg>
-				<i>After watching so many videos, I find that some of them are really helpful. So, you could find my collection of good and valuable videos related to Python on this website. Again, all the learning material here are presented based on one principle:  Keep it Simple and Straightforward (Kiss).</i>
-				</p>
-    </div>
+			<div id="mySidebar" class="sidebar">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+				<a href="#">Learn Python</a>
+				<div class="tableofcontent">
+					<a href="FourierIndex.html">Introduction</a>
+					<a href="#">Inner Product Space</a>
+					<a href="#">Main Definitions and Some Examples</a>
+					<a href="#">Types of Convergence</a>
+					<a href="#">The Projection Theorem</a>
+					<a href="#">Parseval's Identity</a>
+					<a href="#">Convergence of Fourier Series</a>
+					<a href="#">A Gentle Introduction to Fourier Transforms</a>
+					<a href="#">CNN and Fourier Series</a>
+				</div>
+			</div>
 
 	</div>
 
-  </div>
-
-</section>
 
 <section id='content' class='content-section'>
 	<div class="container">
 
+		<div class="toprightindex">
+			<a href="../cshome.html"><span style="color:black;">CS Home</span></a>
+		</div>
+
+		<div class="content-header">
 		<h4>A talk by author of the programming language Python</h4>
+	  </div>
 
 		<br />
 
 		<center>
-			<div class="col-12 col-lg-8">
+			<div class="col-12 col-lg-9">
 				<div class="videoWrapper">
-					<iframe width="560" height="349" frameborder='0'
+					<iframe  frameborder='0'
 					src="https://www.youtube.com/embed/7kn7NtlV6g0">
 					</iframe>
 				</div>
