@@ -53,7 +53,7 @@
 				</center>
 				<br />
 
-				Since topological spaces are the most abstract one, we will not discuss it at the moment. Let's start to talk about metric spaces first, which most students (include me) are quite familiar with. In mathematics, a <i>metric is a set together with a metric on the set. The metric is a function that defines a concept of distance between any two members of the set.</i>
+				Since topological spaces are the most abstract one, we will not discuss it at the moment. Let's start to talk about metric spaces first, which most students (include me) are quite familiar with. In mathematics, a <i>metric space is a set together with a metric on the set</i>. The metric is a function that defines a concept of distance between any two members of the set.
 			</p>
 
 			<p>
@@ -126,7 +126,46 @@
 					</li>
 				</ol>
 
+				When we have a normed vector space (\(\mathcal{V}, N \)), we can obtain a metric on \(\mathcal{V} \) by setting \(d(x, y)  = N(x -y) \) for all \(x, y \in \mathcal{V} \).
+
 			</p>
+
+			<p>
+				<b>Definition</b> <br />
+				An inner product space is a vector space \( \mathcal{V} \) over the field \( \mathbb{F}\) (either the field of real numbers \(\mathbb{R}\) or the field of complex numbers \(\mathbb{C}\)) together with a map:
+				$$\langle \cdot, \cdot \rangle : \mathcal{V} \times \mathcal{V} \to \mathbb{F}$$
+				called an inner product that satisfies the following conditions:
+				<ul>
+					<li>
+						positivity: \( \langle v, v \rangle \geq 0 \) for all \( v \in V \);
+					</li>
+					<li>
+						definiteness: \( \langle v, v \rangle = 0 \) if and only if \(v = 0\);
+					</li>
+					<li>
+						aditivity in first slot: \( \langle u + v, w \rangle = \langle u, w \rangle + \langle v, w \rangle  \)
+					</li>
+					<li>
+						homogeneity in first slow: \( \langle \lambda u, v \rangle = \lambda \langle u, v \rangle \) for all \(\lambda \in F \) and all \(u, v \in V \)
+					</li>
+					<li>
+						conjugate symmetry: \( \langle u, v \rangle = \overline{\langle v, u \rangle} \) for all \(u, v \in V \).
+					</li>
+				</ul>
+			</p>
+
+			<p>
+				<b> Examples</b> <br>
+
+				The Euclidean inner product on \(F^n\) is defined by
+				$$\langle(w_1, \cdots, w_n), (z_1, \cdots, z_n) \rangle = w_1 \overline{z_1} + \cdots + w_n\overline{z_n}$$
+				Therefore, the real n-space \(\mathbb{R}^n\) with the dot product is an inner product space.
+
+				An inner product can be defined on the vector space of continuous real-valued functions on the interval \([-1, 1]\) by
+				$$\langle f, g \rangle = \int_{-1}^1 f(x) \overline{g(x)} dx$$
+				One should verify this equation satisfies those five properties defined in the above definition when we put this dot product into the complex linear space. 
+			</p>
+
 
     </div>
 
