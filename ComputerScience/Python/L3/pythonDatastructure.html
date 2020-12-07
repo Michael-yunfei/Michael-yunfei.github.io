@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	<link rel="stylesheet" href="../../css/main.css">
-	<link rel="stylesheet" href="../../css/python.css">
+	<link rel="stylesheet" href="../../../css/main.css">
+	<link rel="stylesheet" href="../../../css/python.css">
 </head>
 <body>
 
@@ -18,9 +18,9 @@
 				</a>
 			</div>
 			<div class="btn-group" role="group">
-				<a href="L1Code.html" class="btn btn-outline-dark" role="button"><span style="font-size:16px;">Code</span></a>
+				<a href="L2Code.html" class="btn btn-outline-dark" role="button"><span style="font-size:16px;">Code</span></a>
 			</div> <div class="btn-group" role="group">
-				<a href="L1Video.html" class="btn btn-outline-dark" role="button"><span style="font-size:16px;">Vidoes</span></a>
+				<a href="L2Video.html" class="btn btn-outline-dark" role="button"><span style="font-size:16px;">Vidoes</span></a>
 			</div>
 	 </div>
 	</div>
@@ -33,10 +33,10 @@
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 			<a href="#">Learn Python</a>
 			<div class="tableofcontent">
-				<a href="#">Introduction</a>
+				<a href="../Python.html">Introduction</a>
 				<a href="#">Elements of Programming</a>
-				<a href="L2/pythonOOP.html">Object-Oriented Programming</a>
-				<a href="#">Types of Convergence</a>
+				<a href="../L2/pythonOOP.html">Object-Oriented Programming</a>
+				<a href="#">Data Structures</a>
 				<a href="#">The Projection Theorem</a>
 				<a href="#">Parseval's Identity</a>
 				<a href="#">Convergence of Fourier Series</a>
@@ -66,55 +66,45 @@
 
 		<div class="toprightindex">
 			<button class="openbtn" onclick="openNav()">☰ Contents</button>
-			<a  class="indexlink" href="../cshome.html"><span style="color:black;">CS Home</span></a>
+			<a  class="indexlink" href="../../cshome.html"><span style="color:black;">CS Home</span></a>
 		</div>
 
 		<div class="content-header">
-  		<h4>Why Python?</h4>
+  		<h4>Data Sctructures</h4>
   	</div>
 
-
 		<p>
-			Presumably, you should answer this question by yourself. If you want, you could just do some research by searching &ldquo;Why Python?&rdquo; or &ldquo;Should I learn Python?&rdquo; or <q>Is Python worth learning?</q> on Google.
-		</p>
-
-		<h4>Getting Started</h4>
-
-		<p>
-		First of all, we should set up the python environment for coding. Here are many choices, there are my recommendations:
-		<ul>
-			<li>
-				Atom (or Vim)
-			</li>
-			<li>
-				Jupyter Notebook
-			</li>
-			<li>
-				Pycharm
-			</li>
-		</ul>
-		</p>
-
-		<h4>Instructions for this website</h4>
-
-		<p>
-			There are three sections for each chapter: notes, code and videos. In notes section, you could read my explanations and some remarks on different topics. In code section, you could read code, or run them by yourself. In videos section, you would find some very good videos I searched on Youtube.
+			Before creating Python, Guido was a contributor to the ABC languages&mdash;a 10-year research project to design a programming environment for beginners. ABC introduced many ideas we now consider <q>Pythonic</q>: generic operations on sequences, built-in tuple and mapping types, sctructure by indentation, strong typing without variable declarations, and more. It is no accident that Python is so user-friendly.
 		</p>
 
 		<p>
-			I am trying to cover all important topics of learning python. Here is the outline (you could visit each chapter by clicking the content button on the top right corner):
+			Almost all sequences in Python share  rich set of common opertions including iteration, slicing, sorting, and concatenation. Understanding the variety of sequences available in Python saves us from reinventing the wheel, and their common interface inspires us to create APIS that properly support and leverage existing and future sequence types.
 		</p>
 
-		<ol>
-			<li>
-				Elements of Programming
-			</li>
-			<li>
-				Object-Oriented Programming
-			</li>
-		</ol>
+		<h4>An Array of Sequences</h4>
+
+		<p>
+			We can group sequence types by mutability:<br />
+			&ndash; <i>Mutable sequences</i>: list, bytearray, array.array, collections.deque, and memoryview<br />
+			&ndash; <i>Immutable sequences</i>: tuple, str, and bytes.<br />
+
+			The most fundamental sequence type is the list&mdash;mutable and mixed-type. Mastering list comprehensions opens the door to generator expressions.
+		</p>
+
+		<h5>List Comprehensions and Generator Expressions</h5>
+
+		<p>
+
+		</p>
 
 
+
+
+
+
+
+	<h4>Reference</h4>
+	Ramalho, L., 2015. Fluent python: Clear, concise, and effective programming. " O'Reilly Media, Inc.".
 	</div>
 </section>
 
