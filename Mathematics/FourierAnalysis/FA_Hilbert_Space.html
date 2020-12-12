@@ -95,6 +95,51 @@
         with equality iff \( z = 0 \) or equivalently iff \(x = \frac{\langle x, y \rangle y}{||y||^2} \). <span style="float:right">\( \blacksquare \)</span>
       </p>
 
+      <p>
+        <b>Corollary</b> <br />
+        let \( H, \langle \cdot, \cdot \rangle \) be an inner product space and \( ||x || = \sqrt{\langle x, x \rangle}\). Then \( ||\cdot || \) is a norm on \(H\). Moreover \( \langle \cdot, \cdot \rangle \) is continuous on \( H \times H \), where \( H \) is viewed as the normed space \( H, ||\cdot || \). <br />
+        <b>Proof.</b> The only non-trivial thhing to verify that \( || \cdot || \) is  a norm is the triangle inequality:
+        \begin{aligned}
+        ||x + y ||^2 & = ||x||^2 + ||y||^2 + 2 \text{Re} \langle x, y \rangle  \\
+        & \leq ||x ||^2 + ||y||^2 + 2 ||x||||y||  = ( ||x|| + ||y||)^2
+        \end{aligned}
+        where we have made use of Schwarz's inequality. Thaking the square root of this inequality shows \( ||x + y || \leq ||x|| + ||y|| \). For the continuity assertion:
+        \begin{aligned}
+        |\langle x, y \rangle - \langle x', y' \rangle | & = |\langle x - x', y\rangle + \langle x', y \rangle - \langle x', y' \rangle  | \\
+        & = | \langle x - x', y \rangle + \langle x', y - y' \rangle | \\
+        & \leq ||y || x - x' || + ||x'|| ||y - y' || \\
+        & \leq ||y || x - x' || (||x|| + ||x' -x ||) ||y - y'|| \\
+        & = ||y || ||x - x'|| + ||x|| ||y - y'|| + ||x - x'|| ||y - y'||
+        \end{aligned}
+        from which it follows that \(\langle \cdot, \cdot \rangle \) is continuous.
+      </p>
+
+      <p>
+        <b>Definition</b> <br />
+        A Hilbert space is an inner product space \( (H, \langle \cdot, \cdot \rangle ) \) such that the norm defined by \( || \cdot || = \sqrt{ \langle \cdot , \cdot \rangle} \) turns \(H \) into a a complete metric space. (Complete means that the Cauchy Sequences converge, see this <a href="../Dec2020/completenessRealNumber.html">post</a>) <br />
+
+        <b>Proposition</b> <br />
+        Let \( H, \langle \cdot, \cdot \rangle \) be an inner product space then
+        <ol type="i">
+          <li>
+            (Parallelogram Law) \( ||x + y ||^2 + ||x - y ||^2 = 2 ||x||^2 + 2 ||y||^2 \) for all \(x, y \in H \).
+          </li>
+          <li>
+            (Pythagorean Theorem) If \(S \subset H \) is a finite orthonormal set, then $$|| \sum_{x \in S} x ||^2 = \sum_{x \in S} ||x||^2$$.
+          </li>
+        </ol>
+        <b>Proof.</b> I will assume that \(H\) is a complex Hilbert space, the real case being easier. With the very useful formula,
+        \begin{aligned}
+        ||x + y||^2 + ||x - y||^2 & = ||x ||^2 + ||y||^2 + 2 \text{Re}\langle x, y \rangle + ||x||^2 + ||y||^2 - 2 \text{Re} \langle x, y \rangle \\
+        & = 2 ||x ||^2 + 2 ||y ||^2
+        \end{aligned}
+        and
+        \begin{aligned}
+        ||\sum_{x \in S}x ||^2 & = \langle \sum_{x \in S} x, \sum_{x \in S} x \rangle = \sum_{x, x \in S} \langle x, x \rangle \\
+        & = \sum_{x \in S} \langle x, x \rangle = \sum_{x \in S} ||x ||^2
+        \end{aligned}
+      </p>
+
 
 
 
