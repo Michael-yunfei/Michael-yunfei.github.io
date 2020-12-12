@@ -91,11 +91,56 @@
 			The most fundamental sequence type is the list&mdash;mutable and mixed-type. Mastering list comprehensions opens the door to generator expressions.
 		</p>
 
-		<h5>List Comprehensions and Generator Expressions</h5>
+		<h5>List Comprehensions</h5>
 
 		<p>
+			A quick way to build a sequence is using a list comprehension (if the target is a list) or a generator expression (for all other kinds of sequences).
+			<pre>
+				symbols = "$%*_(*)"
+				codes = []
+				for symbol in symbols:
+				    codes.append(ord(symbol))
 
+				codes = [ord(symbol) for symbol in symbols]  # list comprehension
+			</pre>
+			List comprehensions, generator expressions, and their siblings <i>set</i> and <i>dict</i> comprehensions now have their own local scope, like functions. Variables assigned within the expression are local, but variables in the surrounding scope can still be referenced.
 		</p>
+
+		<p>
+			We could also use list comprehensions to produce a cartesian product.
+			<pre>
+				colors = ['black', 'white']
+				sizes = ['S', 'M', 'L']
+				tshirts = [(color, size) for color in colors for size in sizes]
+				# [('black', 'S'),
+				#  ('black', 'M'),
+				#  ('black', 'L'),
+				#  ('white', 'S'),
+				#  ('white', 'M'),
+				#  ('white', 'L')]
+			</pre>
+		</p>
+
+		<h5>Generator Expressions</h5>
+
+		To initialize tuples, arrays, and other types of sequences, you could also start from a list comprehension, but a geneeraor expression saves memeory because it yields items one by one using the iterator protocol instead of building a while list just to feed another constructor.
+
+		<pre>
+			colors = ['black', 'white']
+			sizes = ['S', 'M', 'L']
+			print(((c, s) for c in colors for s in sizes))
+			# generator object genexpr at 0x7fdaad15f480
+
+			for tshirts in ('{} {}'.format(c, s) for c in colors for s in sizes):
+			    print(tshirts)
+
+			# black S
+			# black M
+			# black L
+			# white S
+			# white M
+			# white L
+		</pre>
 
 
 

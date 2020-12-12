@@ -233,3 +233,19 @@ bottom: 0;
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
+
+pre {
+  text-align: left;
+  white-space: pre-line;
+  line-height: 125%;
+  font-family: courier, serif;
+  padding: 10px;
+  background: #f8f8f8;
+  color: black;
+  overflow:auto;
+  width:auto;
+  border:solid gray;
+  border-width:.1em .1em .1em .8em;
+  /* padding:.2em .6em; */
+
+}
